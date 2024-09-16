@@ -6,6 +6,7 @@
     <title>Kalkulus Peubah Banyak</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.min.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <div class="container">
@@ -16,45 +17,58 @@
                 <ul>
                     <li><a href="#" onclick="showSection('turunan-x')">Turunan Parsial Terhadap x</a></li>
                     <li><a href="#" onclick="showSection('turunan-y')">Turunan Parsial Terhadap y</a></li>
-                    <li><a href="#" onclick="showSection('turunan-kedua')">Turunan Kedua</a></li>
+                    <li><a href="#" onclick="showSection('turunan-Parsial-kedua')">Turunan Parsial Kedua</a></li>
                     <li><a href="#" onclick="showSection('fungsi-harmonik')">Fungsi Harmonik</a></li>
-                    <li><a href="#" onclick="showSection('graphics')">Graphics</a></li>
+                    <li><a href="#" onclick="showSection('kalkulator')">kalkulator</a></li>
                 </ul>
-                <li><a href="#" onclick="showSection('kontak')">Kontak</a></li>
-                <li><a href="#" onclick="showSection('kalkulator')">Kalkulator</a></li>
+                <li><a href="#" onclick="showSection('Disusun-oleh')">Disusun oleh</a></li>
             </ul>
         </div>
         <div class="main-content">
             <div id="turunan-parsial" class="section">
                 <h1>Kalkulus Peubah Banyak</h1>
                 <h3>Turunan Parsial</h3>
+                <p>Turunan parsial adalah konsep dalam matematika yang digunakan untuk menentukan perubahan nilai suatu fungsi yang memiliki lebih dari satu variabel.</p>
+                <p>Turunan parsial sebuah fungsi \(f(x,y)\) terhadap variabel \(x\) dengan mempertahankan \(y\) sebagai konstan, ditulis sebagai \(\frac{ꝺf}{ꝺx}\). Secara matematis, jika f(x,y) memiliki turunan parsial di titik \((x_0,y_0)\), maka: 
+
+                </p>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, illum aspernatur consectetur error ipsum voluptatem fuga veniam consectetur rem odit consequuntur minima aperiam natus magnam vero enim cum corrupti dolore.
+                    \[
+                    \frac{ꝺf}{ꝺx}(x_0, y_0)=\lim_{Δx\to 0}\frac{f(x_0)+∆x,(y_0)-f(x_0,y_0)}{∆x}
+                    \]
                 </p>
             </div>
-            <div id="turunan-x" class="section" style="display: none;">
+            <div id="turunan-x" class="#" style="display: none;">
                 <h2>Turunan terhadap x</h2>
-                <p>Materi turunan terhadap x. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Jika y konstan, katakan \(y = y_0\), maka z = \(f(x, y_0)\) merupakan fungsi dari \(x\) saja. Turunannya di \(x = x_0\) disebut sebagai turunan parsial dari f terhadap x di \((x_0, y_0)\) dan dilambangkan dengan:
+                    \[
+                    f_x(x_0, y_0) = \lim_{h \to 0} \frac{f(x_0 + h, y_0) - f(x_0, y_0)}{h}
+                    \]</p>
+
             </div>
-            <div id="turunan-y" class="section" style="display: none;">
+            <div id="turunan-y" class="#" style="display: none;">
                 <h2>Turunan terhadap y</h2>
-                <p>Materi turunan terhadap y. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Jika x konstan, katakan \(x = x_0\), maka z = \(f(x_0, y)\) merupakan fungsi dari y saja. Turunannya di \(y = y_0\) disebut sebagai turunan parsial dari \(f\) terhadap \(y\) di \((x_0, y_0)\) dan dilambangkan dengan \(fy(x_0, y_0)\).
+                    \[
+                    f_y (x_0,y_0 )=\lim_{k\to\ 0} \frac{f(x_0,y_0+k) - f(x_0,y_0)}{k}\]</p>
             </div>
-            <div id="turunan-kedua" class="section" style="display: none;">
-                <h2>Turunan Kedua</h2>
-                <p>Materi tentang turunan kedua. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div id="turunan-Parsial-kedua" class="#" style="display: none;">
+                <h2>Turunan Parsial Kedua</h2>
+                <p>Turunan parsial kedua suatu fungsi dua peubah dapat diperoleh dari turunan parsial pertamanya. Karena ada dua turunan parsial pertama, \(f_x\) dan \(f_y\), dan masing-masing mempunyai dua turunan parsial, maka kita akan mendapatkan empat turunan parsial kedua, yaitu
+                    \(f_{xx} = (f_x)_x; f_{xy} = (f_x)_y, f_{yx} = (f_y)_x, f_{yy} = (f_y)_y\)</p>
+                <p> <p>Contoh 1: </p>
+                <p>Diketahui z = f(x, y) = 1 − \(x^2\) − \(y^2\)
+                    Turunan parsial pertamanya adalah 
+                    \(f_x\)(x, y) = −2x; \(f_y\)(x, y) = −2y
+                    Turunan parsial keduanya adalah
+                    \(f_x\)\(_x\)(x, y) = −2; \(f_{xy}\)(x, y) = 0.
+                    \(f_{yx}\)(x, y) = 0; \(f_{yy}\)(x, y)= −2.
+                    </p>
             </div>
-            <div id="fungsi-harmonik" class="section" style="display: none;">
+            <div id="fungsi-harmonik" class="#" style="display: none;">
                 <h2>Fungsi Harmonik</h2>
-                <p>Materi tentang fungsi harmonik. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div id="graphics" class="section" style="display: none;">
-                <h2>Graphics</h2>
-                <p>Materi tentang graphics. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div id="kontak" class="section" style="display: none;">
-                <h2>Kontak</h2>
-                <p>Kontak kami. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Fungsi \(z = f(x,y)\) disebut fungsi harmonik bila memenuhi
+                    persamaan Laplace: \(f_{xx} + f_{yy} = 0.\)</p>
             </div>
             <div id="kalkulator" class="section" style="display: none;">
                 <h2>Partial Derivative Calculator</h2>
@@ -68,7 +82,15 @@
                 <h3>Result:</h3>
                 <p id="result"></p>
             </div>
-        </div>
+            <div id="Disusun-oleh" class="#" style="display: none;">
+                <h2>Penyusun</h2>
+                <p>KELAS : PSM 23 A </p>
+                <p>KELOMPOK : 8 </p>
+                <ul>NAMA ANGGOTA: </ul>
+                <ul>  Agnes Margareta Naisnggolan     (4233530003)</ul>
+                <ul>  Cindy Injilia S                (4233230007)</ul>
+                <ul>  Grace Analia Stephani Hutauruk (4233530016)</ul>
+
     </div>
 
     <script src="script.js"></script>
